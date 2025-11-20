@@ -1,0 +1,240 @@
+import streamlit as st
+import requests
+import os
+import streamlit_authenticator as stauth
+import yaml
+from yaml.loader import SafeLoader
+from streamlit_option_menu import option_menu
+import bcrypt
+
+BASE_URL = "http://localhost:8000"
+
+# --- TẠO DANH SÁCH NGƯỜI DÙNG VÀ CẤU HÌNH ĐĂNG NHẬP ---
+# Mật khẩu đơn giản cho admin và sinh viên
+plain_passwords = ['admin', 'sv001']
+hashed_passwords = [
+    bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
+    for password in plain_passwords
+]
+
+config = {
+    'cookie': {
+        'expiry_days': 30,
+        'key': 'some_secret_key',
+        'name': 'some_cookie_name'
+    },
+    'credentials': {
+        'usernames': {
+            'admin': {
+                'email': 'admin@example.com',
+                'name': 'Quản trị viên',
+                'password': hashed_passwords[0],
+                'role': 'admin'
+            },
+            'sinhvien': {
+                'email': 'student@example.com',
+                'name': 'Sinh viên',
+                'password': hashed_passwords[1],
+                'role': 'student'
+            }
+        }
+    }
+}
+
+with open('config.yaml', 'w') as file:
+    yaml.dump(config, file, default_flow_style=False)
+
+# --- Tải cấu hình và khởi tạo Authenticator ---
+with open('config.yaml') as file:
+    config = yaml.load(file, Loader=SafeLoader)
+
+authenticator = stauth.Authenticate(
+    config['credentials'],
+    config['cookie']['name'],
+    config['cookie']['key'],
+    config['cookie']['expiry_days'],
+)
+
+# --- Xử lý đăng nhập ---
+if 'authentication_status' not in st.session_state:
+    st.session_state.authentication_status = None
+if 'username' not in st.session_state:
+    st.session_state.username = None
+
+if st.session_state.authentication_status is False:
+    st.error('Tên người dùng/mật khẩu không chính xác')
+    col1, col2 = st.columns([1, 1])
+    with col1:
+        st.session_state.username_input = st.text_input("Tên đăng nhập")
+    with col2:
+        st.session_state.password_input = st.text_input("Mật khẩu", type="password")
+    if st.button('Đăng nhập'):
+        if st.session_state.username_input == 'admin' and st.session_state.password_input == 'admin':
+            st.session_state.authentication_status = True
+            st.session_state.username = 'admin'
+            st.session_state.name = 'Quản trị viên'
+            st.rerun()
+        elif st.session_state.username_input == 'sinhvien' and st.session_state.password_input == 'sv001':
+            st.session_state.authentication_status = True
+            st.session_state.username = 'sinhvien'
+            st.session_state.name = 'Sinh viên'
+            st.rerun()
+        else:
+            st.session_state.authentication_status = False
+            st.rerun()
+
+elif st.session_state.authentication_status is None:
+    st.warning('Vui lòng nhập tên người dùng và mật khẩu của bạn')
+    col1, col2 = st.columns([1, 1])
+    with col1:
+        st.session_state.username_input = st.text_input("Tên đăng nhập")
+    with col2:
+        st.session_state.password_input = st.text_input("Mật khẩu", type="password")
+    if st.button('Đăng nhập'):
+        if st.session_state.username_input == 'admin' and st.session_state.password_input == 'admin':
+            st.session_state.authentication_status = True
+            st.session_state.username = 'admin'
+            st.session_state.name = 'Quản trị viên'
+            st.rerun()
+        elif st.session_state.username_input == 'sinhvien' and st.session_state.password_input == 'sv001':
+            st.session_state.authentication_status = True
+            st.session_state.username = 'sinhvien'
+            st.session_state.name = 'Sinh viên'
+            st.rerun()
+        else:
+            st.session_state.authentication_status = False
+            st.rerun()
+
+if st.session_state.authentication_status:
+    # --- Header của ứng dụng ---
+    st.markdown(
+        """
+        <style>
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .header-logo {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+        }
+        .header-title-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header-title {
+            color: #004d99;
+            font-size: 1.5em;
+            margin: 0;
+            font-weight: bold;
+        }
+        .header-subtitle {
+            color: #666;
+            font-size: 1em;
+            margin-top: 5px;
+        }
+        </style>
+        <div class="header-container">
+            <img src="logo.jpg"
+                 alt="Logo Đại học Kỹ thuật Công nghiệp"
+                 class="header-logo">
+            <div class="header-title-container">
+                <h1 class="header-title">TRƯỜNG ĐẠI HỌC KỸ THUẬT CÔNG NGHIỆP</h1>
+                <h2 class="header-title">VIỆN CÔNG NGHỆ GIÁO DỤC VÀ ĐÀO TẠO MỞ</h2>
+                <p class="header-subtitle">Tư vấn tuyển sinh & Hỗ trợ sinh viên</p>
+            </div>
+        </div>
+        <hr style="border: 1px solid #ddd;">
+        """,
+        unsafe_allow_html=True
+    )
+
+    # --- Trang chính sau khi đăng nhập thành công ---
+    st.sidebar.title(f'Chào mừng, {st.session_state.name}!')
+    if st.sidebar.button("Đăng xuất"):
+        st.session_state.authentication_status = False
+        st.session_state.username = None
+        st.rerun()
+
+    st.session_state['role'] = config['credentials']['usernames'][st.session_state.username]['role']
+
+    # --- Phân quyền hiển thị Sidebar ---
+    if st.session_state['role'] == 'admin':
+        st.sidebar.subheader("Quản lý dữ liệu")
+        # Tải lên tài liệu mới
+        st.sidebar.subheader("Tải lên tài liệu mới")
+        uploaded_file = st.sidebar.file_uploader(
+            "Tải file PDF, DOCX, TXT, CSV, XLSX",
+            type=["pdf", "docx", "txt", "csv", "xlsx", "xls"],
+            accept_multiple_files=False
+        )
+
+        if uploaded_file is not None:
+            with st.spinner(f"Đang tải lên '{uploaded_file.name}' và cập nhật hệ thống..."):
+                try:
+                    files = {'file': (uploaded_file.name, uploaded_file.getvalue(), uploaded_file.type)}
+                    response = requests.post(f"{BASE_URL}/uploadfile/", files=files)
+                    if response.status_code == 200:
+                        st.sidebar.success(f"File '{uploaded_file.name}' tải lên và hệ thống được cập nhật thành công!")
+                    else:
+                        st.sidebar.error(f"Lỗi khi tải lên file: {response.json().get('detail', 'Lỗi không xác định.')}")
+                except Exception as e:
+                    st.sidebar.error(f"Lỗi kết nối: {e}")
+
+        # Nút để kích hoạt quá trình train lại toàn bộ dữ liệu thủ công
+        st.sidebar.subheader("Cập nhật lại hệ thống")
+        if st.sidebar.button("Train lại toàn bộ dữ liệu"):
+            with st.spinner('Đang train lại toàn bộ dữ liệu...'):
+                try:
+                    response = requests.post(f"{BASE_URL}/retrain")
+                    if response.status_code == 200:
+                        st.sidebar.success("Train dữ liệu thành công! Hệ thống đã được cập nhật.")
+                    else:
+                        st.sidebar.error(f"Lỗi khi train: {response.json().get('detail', 'Lỗi không xác định.')}")
+                except Exception as e:
+                    st.sidebar.error(f"Lỗi kết nối: {e}")
+
+    # --- Phần chính của ứng dụng: Giao diện Chatbot ---
+    st.title("Hệ thống hỗ trợ thông tin")
+    st.sidebar.markdown("---")
+    st.sidebar.info("Hệ thống được phát triển bởi Viện Công nghệ Giáo dục và Đào tạo Mở.")
+
+    # Initialize chat history
+    if "chat_history" not in st.session_state:
+        st.session_state.chat_history = []
+
+    # Hiển thị tin nhắn chat
+    for message_id, (role, message) in enumerate(st.session_state.chat_history):
+        with st.chat_message(role):
+            st.markdown(message)
+
+    # Input box ở cuối trang
+    if user_input := st.chat_input("Hỏi bất kỳ điều gì về Viện chúng tôi..."):
+        # Hiển thị tin nhắn người dùng ngay lập tức
+        st.session_state.chat_history.append(("user", user_input))
+        with st.chat_message("user"):
+            st.markdown(user_input)
+
+        # Gọi backend để lấy câu trả lời
+        with st.spinner("Đang tìm kiếm và tạo câu trả lời..."):
+            try:
+                response = requests.post(f"{BASE_URL}/ask", json={"question": user_input})
+                if response.status_code == 200:
+                    answer = response.json().get("answer", "Xin lỗi, tôi không thể tìm thấy câu trả lời cho câu hỏi này.")
+                else:
+                    answer = f"Lỗi: Không thể lấy phản hồi từ máy chủ. (Mã lỗi: {response.status_code})"
+            except requests.exceptions.ConnectionError:
+                answer = "Lỗi kết nối: Vui lòng đảm bảo máy chủ backend đang chạy."
+            except Exception as e:
+                answer = f"Đã xảy ra lỗi không mong muốn: {e}"
+
+        # Hiển thị câu trả lời của trợ lý
+        st.session_state.chat_history.append(("assistant", answer))
+        with st.chat_message("assistant"):
+            st.markdown(answer)
+        st.rerun()

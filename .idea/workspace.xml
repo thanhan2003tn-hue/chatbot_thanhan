@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="08ff585f-0e0a-4068-947f-f5d59a98e796" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/pythonProject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chatbot_RAG-main/1.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chatbot_RAG-main/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chatbot_RAG-main/app" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chatbot_RAG-main/core/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chatbot_RAG-main/data/so-tay-chu-nhiem-lop-co-van-hoc-tap.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chatbot_RAG-main/font-end/logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chatbot_RAG-main/serve" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/a/1718 Chương trình ĐTTX-KTXD.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/a/1718-Kinh tế công nghiệp.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/a/1718. CTĐTTX-QLCN.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/a/250701 Sổ tay Điện tử.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/a/CT ĐTTX NNA kèm theo QĐ ban hành.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/a/Kinh te cong nghiep-1718.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/a/Ky thuat xay dung-1718 (1).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/a/MÔ TẢ CHƯƠNG TRÌNH ĐÀO TẠO TỪ XA NGÀNH KINH TẾ CÔNG NGHIỆP.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/a/MÔ TẢ CHƯƠNG TRÌNH ĐÀO TẠO TỪ XA NGÀNH KỸ THUẬT XÂY DỰNG.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/a/MÔ TẢ CHƯƠNG TRÌNH ĐÀO TẠO TỪ XA NGÀNH NGÔN NGỮ ANH.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/a/MÔ TẢ CHƯƠNG TRÌNH ĐÀO TẠO TỪ XA NGÀNH QUẢN LÝ CÔNG NGHIỆP.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/a/QC ĐTTX 2025 18.2 (222).docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/a/Quan ly cong nghiep-1718.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/a/STGVCN.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/a/index.faiss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/a/index.pkl" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="31mh2FAS9PXIkTJNqw2u3XecfqW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/8/PycharmProjects/pythonProject/Chatbot_RAG-main/data&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;stardust.markdown.MarkdownSplitEditorSuppressor:keyList&quot;: []
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\8\PycharmProjects\pythonProject\Chatbot_RAG-main\data" />
+      <recent name="C:\Users\8\PycharmProjects\pythonProject\a" />
+      <recent name="C:\Users\8\PycharmProjects\pythonProject\Chatbot_RAG-main\font-end" />
+      <recent name="C:\Users\8\PycharmProjects\pythonProject\Chatbot_RAG-main" />
+      <recent name="C:\Users\8\PycharmProjects\pythonProject\data" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\8\PycharmProjects\pythonProject\a" />
+      <recent name="C:\Users\8\PycharmProjects\pythonProject\Chatbot_RAG-main\font-end" />
+      <recent name="C:\Users\8\PycharmProjects\pythonProject\Chatbot_RAG-main" />
+      <recent name="C:\Users\8\PycharmProjects\pythonProject\Chatbot_RAG-main\core" />
+      <recent name="C:\Users\8\PycharmProjects\pythonProject\config" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pythonProject" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Chatbot_RAG-main/font-end" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Chatbot_RAG-main/font-end/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.app" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-6a3326d57233-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.24807.21" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="08ff585f-0e0a-4068-947f-f5d59a98e796" name="Changes" comment="" />
+      <created>1756134945893</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1756134945893</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Chatbot_RAG-main/core/llm/gemini_llm.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Chatbot_RAG-main/font-end/app.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
