@@ -6,6 +6,24 @@
   <component name="ChangeListManager">
     <list default="true" id="08ff585f-0e0a-4068-947f-f5d59a98e796" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chatbot_RAG-main/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Chatbot_RAG-main/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a/1718 Chương trình ĐTTX-KTXD.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a/1718-Kinh tế công nghiệp.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a/1718. CTĐTTX-QLCN.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a/250701 Sổ tay Điện tử.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a/250701 Sổ tay Điện tử.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a/CT ĐTTX NNA kèm theo QĐ ban hành.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a/Kinh te cong nghiep-1718.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a/Ky thuat xay dung-1718 (1).pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a/MÔ TẢ CHƯƠNG TRÌNH ĐÀO TẠO TỪ XA NGÀNH KINH TẾ CÔNG NGHIỆP.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a/MÔ TẢ CHƯƠNG TRÌNH ĐÀO TẠO TỪ XA NGÀNH KỸ THUẬT XÂY DỰNG.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a/MÔ TẢ CHƯƠNG TRÌNH ĐÀO TẠO TỪ XA NGÀNH NGÔN NGỮ ANH.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a/MÔ TẢ CHƯƠNG TRÌNH ĐÀO TẠO TỪ XA NGÀNH QUẢN LÝ CÔNG NGHIỆP.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a/QC ĐTTX 2025 18.2 (222).docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a/Quan ly cong nghiep-1718.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a/STGVCN.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a/index.faiss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a/index.pkl" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -10,3 +10,4 @@ async def root(): # do dùng ASGI nên ở đây thêm async, nếu bên thứ 3
 @app.get("/items/{item_id}")
 async def read_item(item_id = "default_item"):
     return {"item_id": item_id}
+#12345678
