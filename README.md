@@ -25,6 +25,9 @@ Hệ thống cho phép:
 
 
 ---
+<img width="1851" height="3840" alt="image" src="https://github.com/user-attachments/assets/54ff0268-d6b8-4d50-8510-a44ef0be0613" />
+---
+
 
 ## 3. Chức năng chính
 
