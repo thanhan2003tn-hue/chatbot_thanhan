@@ -5,36 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08ff585f-0e0a-4068-947f-f5d59a98e796" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/pythonProject.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chatbot_RAG-main/1.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chatbot_RAG-main/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chatbot_RAG-main/app" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chatbot_RAG-main/core/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chatbot_RAG-main/data/so-tay-chu-nhiem-lop-co-van-hoc-tap.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chatbot_RAG-main/font-end/logo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chatbot_RAG-main/serve" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/a/1718 Chương trình ĐTTX-KTXD.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/a/1718-Kinh tế công nghiệp.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/a/1718. CTĐTTX-QLCN.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/a/250701 Sổ tay Điện tử.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/a/CT ĐTTX NNA kèm theo QĐ ban hành.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/a/Kinh te cong nghiep-1718.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/a/Ky thuat xay dung-1718 (1).pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/a/MÔ TẢ CHƯƠNG TRÌNH ĐÀO TẠO TỪ XA NGÀNH KINH TẾ CÔNG NGHIỆP.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/a/MÔ TẢ CHƯƠNG TRÌNH ĐÀO TẠO TỪ XA NGÀNH KỸ THUẬT XÂY DỰNG.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/a/MÔ TẢ CHƯƠNG TRÌNH ĐÀO TẠO TỪ XA NGÀNH NGÔN NGỮ ANH.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/a/MÔ TẢ CHƯƠNG TRÌNH ĐÀO TẠO TỪ XA NGÀNH QUẢN LÝ CÔNG NGHIỆP.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/a/QC ĐTTX 2025 18.2 (222).docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/a/Quan ly cong nghiep-1718.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/a/STGVCN.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/a/index.faiss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/a/index.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +22,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "conganh-it"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/thanhan2003tn-hue/chatbot_thanhan.git",
+    "accountId": "11db20df-ae88-488e-8c53-b72eb5821842"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -62,17 +45,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.app.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/8/PycharmProjects/pythonProject/Chatbot_RAG-main/data&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.app.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/8/PycharmProjects/pythonProject/Chatbot_RAG-main/data",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;stardust.markdown.MarkdownSplitEditorSuppressor:keyList&quot;: []
+  "keyToStringList": {
+    "stardust.markdown.MarkdownSplitEditorSuppressor:keyList": []
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\8\PycharmProjects\pythonProject\Chatbot_RAG-main\data" />
