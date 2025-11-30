@@ -56,7 +56,7 @@
     │   ├── llm
     │   ├── rag
     │   └── retreival
-    ├── font-end
+    ├── frontend
     │   └── app.py
     ├── main.py
     ├── requirments.txt
@@ -162,7 +162,7 @@
 			</details>
 		</blockquote>
 	</details>
-	<details> <!-- font-end Submodule -->
+	<details> <!-- frontend Submodule -->
 		<summary><b>font-end</b></summary>
 		<blockquote>
 			<table>

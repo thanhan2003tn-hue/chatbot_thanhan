@@ -1,3 +1,4 @@
+#uvicorn serve:app --reload
 import os
 import shutil
 from typing import Dict, Any, List, TypedDict
@@ -114,12 +115,21 @@ def retrain_vector_store_full():
     return new_vector_store
 
 
+
+# --- LOGIC KHỞI TẠO VÀ RAG CHAIN ---
+
 # Khởi tạo vector store khi ứng dụng khởi động
 try:
     vector_Hugging.load_vector_store(VECTOR_DB_PATH)
     logger.info("Vector store loaded successfully on startup.")
-except FileNotFoundError:
-    logger.info("Vector store not found on startup, creating a new one...")
+except RuntimeError as e: # Bắt lỗi cụ thể của FAISS nếu tệp không tồn tại
+    if "could not open" in str(e):
+        logger.info("Vector store index.faiss not found on startup. Checking for documents...")
+        retrain_vector_store_full() # <--- HÀM NÀY SẼ TẠO DB MỚI
+    else:
+        raise
+except Exception as e:
+    logger.error(f"An unexpected error occurred during vector store loading: {e}")
     retrain_vector_store_full()
 
 
@@ -146,7 +156,7 @@ def generate(state: State):
 
     if is_student_query and not is_admission_query:
         prompt = (
-            f"Bạn là trợ lý thông tin sinh viên của Viện Công nghệ Giáo dục và Đào tạo Mở - Trường Đại học Kỹ thuật Công nghiệp, Thái Nguyên. "
+            f"Bạn là trợ lý thông tin sinh viên của Trường Đại học Kỹ thuật Công nghiệp, Thái Nguyên. "
             f"Ưu tiên trả lời câu hỏi dựa trên các thông tin từ bảng hoặc file Excel nếu có. "
             f"Dựa trên các thông tin sau, hãy trả lời câu hỏi của người dùng một cách chính xác và ngắn gọn. "
             f"Nếu thông tin không liên quan hoặc không đủ để trả lời, hãy nói 'Tôi không tìm thấy thông tin phù hợp về sinh viên này'.\n"
@@ -154,14 +164,14 @@ def generate(state: State):
             f"Câu hỏi của sinh viên: {state['question']}")
     elif is_admission_query and not is_student_query:
         prompt = (
-            f"Bạn là trợ lý tư vấn tuyển sinh của Viện Công nghệ Giáo dục và Đào tạo Mở - Trường Đại học Kỹ thuật Công nghiệp, Thái Nguyên. "
+            f"Bạn là trợ lý tư vấn tuyển sinh của Trường Đại học Kỹ thuật Công nghiệp, Thái Nguyên. "
             f"Dựa trên nội dung sau, hãy trả lời câu hỏi của người dùng một cách đầy đủ và chính xác. "
             f"Nếu không có thông tin phù hợp, hãy nói 'Tôi không tìm thấy thông tin phù hợp về tuyển sinh'.\n"
             f"Nội dung được cung cấp:\n{context_text}\n"
             f"Câu hỏi về tuyển sinh: {state['question']}")
     else:
         prompt = (
-            f"Bạn là trợ lý của Viện Công nghệ Giáo dục và Đào tạo Mở - Trường Đại học Kỹ thuật Công nghiệp, Thái Nguyên. "
+            f"Bạn là trợ lý của Trường Đại học Kỹ thuật Công nghiệp, Thái Nguyên. "
             f"Dựa trên nội dung sau, hãy trả lời câu hỏi của người dùng một cách chính xác và đầy đủ. "
             f"Nếu không tìm thấy thông tin liên quan trong nội dung đã cung cấp, hãy nói 'Tôi không tìm thấy thông tin phù hợp với câu hỏi của bạn'.\n"
             f"Nội dung được cung cấp:\n{context_text}\n"
